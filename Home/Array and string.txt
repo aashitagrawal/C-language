@@ -1,0 +1,727 @@
+Array
+#include<stdio.h>
+void main ()
+{
+int i,a[50];
+for(i=1; i<=10; i++)
+{
+	printf("Enter a number at %d  ",i);
+	scanf("%d",&a[i]);
+}
+for(i=1; i<=10; i++)
+{
+	printf("%d \n",a[i]);
+}
+}
+
+
+
+
+
+
+
+
+
+Array sum
+#include<stdio.h>
+void main ()
+{
+int i,a[10],sum=0;
+for(i=1; i<=5; i++)
+{
+	printf("Entter value at %d ",i);
+	scanf("%d",&a[i]);
+}
+for(i=1; i<=5; i++)
+sum=sum+a[i];
+printf("%d \n",sum);
+}
+
+
+
+
+
+
+
+
+
+array mul
+#include<stdio.h>
+void main ()
+{
+int i,a[10],sum=1;
+for(i=1; i<=5; i++)
+{
+	printf("Entter value at %d ",i);
+	scanf("%d",&a[i]);
+}
+for(i=1; i<=5; i++)
+sum=sum*a[i];
+printf("%d \n",sum);
+}
+
+
+
+
+
+
+
+
+
+
+Array serching element
+#include<stdio.h>
+void main ()
+{
+int i,a[10],b;
+for(i=1; i<=5; i++)
+{
+	printf("Enter value at %d ",i);
+	scanf("%d",&a[i]);
+}
+printf("Enter value to search ");
+scanf("%d",&b);
+for(i=1; i<=5; i++)
+{
+	if(a[i]==b)
+	{
+		printf("%d \n",i);
+		break;
+	}
+}
+}
+
+
+
+
+
+
+
+
+
+Array finding max value
+#include<stdio.h>
+void main ()
+{
+int a[5],i,max;
+for(i=1; i<=5; i++)
+{
+	printf("Enter value at %d ",i);
+	scanf("%d",&a[i]);
+}
+max=a[1];
+for(i=1; i<=5; i++)
+{
+	if(a[i]>max)
+	{
+		max=a[i];
+	}
+}
+printf("%d\n",max);
+}
+
+
+
+
+
+
+
+
+
+Array printing only even numbers
+#include<stdio.h>
+void main ()
+{
+int a[5],i;
+for(i=1; i<=5; i++)
+{
+	printf("Enter value at %d ",i);
+	scanf("%d",&a[i]);
+}
+for(i=1; i<=5; i++)
+{
+	if(a[i]%2==0)
+	{
+		printf("%d \n",a[i]);
+	}
+}
+}
+
+
+
+
+
+
+
+
+
+Array replace
+#include<stdio.h>
+void main ()
+{
+int pos,rep,i,a[5];
+for(i=1; i<=5; i++)
+{
+	printf("Enter value at %d ",i);
+	scanf("%d",&a[i]);
+}
+printf("Enter position ");
+scanf("%d",&pos);
+printf("Enter number to be replaced ");
+scanf("%d",&rep);
+a[pos]=rep;
+for(i=1; i<=5; i++)
+{
+	printf("%d\n",a[i]);
+}
+}
+
+
+
+
+
+
+
+
+
+Array insertion
+#include<stdio.h>
+void main ()
+{
+int i,a[10],pos,ins;
+for(i=1; i<=5; i++)
+{
+	printf("Enter value at %d ",i);
+	scanf("%d",&a[i]);
+}
+printf("Enter position ");
+scanf("%d",&pos);
+printf("Enter value ");
+scanf("%d",&ins);
+for(i=5; i>=pos; i--)
+{
+	a[i+1]=a[i];
+}
+a[pos]=ins;
+for(i=1; i<=6; i++)
+{
+	printf("%d\n",a[i]);
+}
+}
+
+
+
+
+
+
+
+
+
+Array deletion
+#include<stdio.h>
+void main ()
+{
+int a[10],i,pos;
+for(i=1; i<=5; i++)
+{
+	printf("Enter value at %d ",i);
+	scanf("%d",&a[i]);
+}
+printf("Enter position ");
+scanf("%d",&pos);
+for(i=pos; i<=5; i++)
+{
+	a[i]=a[i+1];
+}
+for(i=1; i<=4; i++)
+{
+	printf("%d \n",a[i]);
+}
+}
+
+
+
+
+
+
+
+
+
+Array bubble sorting
+#include<stdio.h>
+void main ()
+{
+int i,a[10],j,b;
+for(i=1; i<=6; i++)
+{
+	printf("Enter value at %d ",i);
+	scanf("%d",&a[i]);
+}
+for(i=1; i<=6; i++)
+{
+	for(j=1; j<=5; j++)
+	{
+		if(a[j]>a[j+1])
+		{
+			b=a[j];
+			a[j]=a[j+1];
+			a[j+1]=b;
+		}
+	}
+}
+for(i=1; i<=6; i++)
+{
+	printf("%d\n",a[i]);
+}
+}
+
+
+
+
+
+
+
+
+
+Array selection sorting
+#include<stdio.h>
+void main ()
+{
+int i,a[10],j,min,pos,b;
+for(i=1; i<=6; i++)
+{
+	printf("Enter value at %d ",i);
+	scanf("%d",&a[i]);
+}
+for(i=1; i<=6; i++)
+{
+	min=a[i];
+	pos=i;
+	for(j=1; j<=6; j++)
+	{
+		if(min>a[j])
+		{
+			min=a[j];
+			pos=j;
+		}
+	}
+	b=a[i];
+	a[i]=a[pos];
+	a[pos]=b;
+}
+for(i=1; i<=6; i++)
+{
+	printf("%d\n",a[i]);
+}
+}
+
+
+
+
+
+
+
+
+
+2d Array
+#include<stdio.h>
+void main ()
+{
+int i,a[3][3],j;
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("Enter value ");
+		scanf("%d",&a[i][j]);
+	}
+}
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("%d ",a[i][j]);
+	}
+	printf("\n");
+}
+}
+
+
+
+
+
+
+
+
+
+2d array searching
+#include<stdio.h>
+void main ()
+{
+int a[3][3],i,j,b;
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("Enter value ");
+		scanf("%d",&a[i][j]);
+	}
+}
+printf("Enter value to search ");
+scanf("%d",&b);
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		if(a[i][j]==b)
+		{
+			printf("%d %d",i,j);
+			break;
+		}
+	}
+}
+}
+
+
+
+
+
+
+
+
+
+2d array add
+#include<stdio.h>
+void main ()
+{
+int a[3][3],b[3][3],i,j,sum[3][3];
+printf("1ST MATRIX\n");
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("Enter value ");
+		scanf("%d",&a[i][j]);
+	}
+}
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("%d ",a[i][j]);
+	}
+	printf("\n");
+}
+printf("2ND MATRIX\n");
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("Enter value ");
+		scanf("%d",&b[i][j]);
+	}
+}
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("%d ",b[i][j]);
+	}
+	printf("\n");
+}
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		sum[i][j]=a[i][j]+b[i][j];
+	}
+}
+printf("\n");
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("%4d",sum[i][j]);
+	}
+	printf("\n");
+}
+}
+
+
+
+
+
+
+
+
+
+2d array transporse
+#include<stdio.h>
+void main ()
+{
+int i,j,a[3][3];
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("Enter value ");
+		scanf("%d",&a[i][j]);
+	}
+}
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("%d ",a[i][j]);
+	}
+	printf("\n");
+}
+printf("\n");
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("%d ",a[j][i]);
+	}
+	printf("\n");
+}
+}
+
+
+
+
+
+
+
+
+
+2d array mul
+#include<stdio.h>
+void main ()
+{
+int a[3][3],b[3][3],mul[3][3];i,j,k,s;
+printf("1ST MATRIX\n");
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("Enter value ");
+		scanf("%d",&a[i][j]);
+	}
+}
+printf("2ND MATIRX\n");
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("Enter value ");
+		scanf("%d",&b[i][j]);
+	}
+}
+for(k=1; k<=3; k++)
+{
+	for(i=1; i<=3; i++)
+	{
+		s=0;
+		for(j=1; j<=3; j++)
+		{
+			s=s+(a[k][j]*b[j][i]);
+		}
+		mul[k][i]=s;
+	}
+}
+printf("\n");
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("%d ",mul[i][j]);
+	}
+	printf("\n");
+}
+}
+
+
+
+
+
+
+
+
+
+2d array diagonal 1
+#include<stdio.h>
+void main ()
+{
+int a[3][3],i,j,s=0;
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("Enter value");
+		scanf("%d",&a[i][j]);
+	}
+}
+for(i=1; i<=3; i++)
+{
+	s=s+a[i][i];
+}
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("%d",a[i][j]);
+	}
+	printf("\n");
+}
+printf("%d\n",s);
+}
+
+
+
+
+
+
+
+
+
+2d array diagonal 2
+#include<stdio.h>
+void main ()
+{
+int a[3][3],i,j,s=0;
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("Enter value");
+		scanf("%d",&a[i][j]);
+	}
+}
+for(i=1; i<=3; i++)
+{
+	s=s+a[i][3-i+1];
+}
+for(i=1; i<=3; i++)
+{
+	for(j=1; j<=3; j++)
+	{
+		printf("%d",a[i][j]);
+	}
+	printf("\n");
+}
+printf("%d\n",s);
+}
+
+
+
+
+
+
+
+
+
+String - "gets" command
+#include<stdio.h>
+void main ()
+{
+char b[30];
+printf("Enter your name ");
+gets(b);
+printf("%s\n",b);
+}
+
+
+
+
+
+
+
+
+
+Joining two strings - "strcat"
+#include<stdio.h>
+void main ()
+{
+char a[10],b[10];
+printf("Enter first name ");
+gets(a);
+printf("Enter last name ");
+gets(b);
+strcat(a,b);
+printf("%s\n",a);
+}
+
+
+
+
+
+
+
+
+
+Comparing two strings - "strcmp"
+#include<stdio.h>
+void main ()
+{
+int a[10],b[10];
+int c;
+printf("Enter anything ");
+gets(a);
+printf("Enter anything ");
+gets(b);
+c=strcmp(a,b);
+printf("%d\n",c);
+if(c==0)
+printf("It is same \n");
+else
+printf("It is not same \n");
+}
+
+
+
+
+
+
+
+
+
+Copying two strings - "strcpy"
+#include<stdio.h>
+void main ()
+{
+char a[10],b[10];
+printf("Enter anything ");
+gets(b);
+strcpy(a,b);
+printf("%s\n",a);
+}
+
+
+
+
+
+
+
+
+
+Finding length of a string - "strlen"
+#include<stdio.h>
+void main ()
+{
+char a[10];
+int b;
+printf("Enter anything ");
+gets(a);
+b=strlen(a);
+printf("%d\n",b);
+}
+
+
+
+
+
+
+
+
+
